@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UrlController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/app', [UrlController::class, 'create'])->name('url.create');
+Route::post('/app', [UrlController::class, 'store'])->name('url.store');
+Route::get('/{id}', [UrlController::class, 'index'])->name('url.index');
+Route::fallback(function() {
+    return redirect()->route('url.create');
 });
