@@ -17,6 +17,4 @@ use App\Http\Controllers\UrlController;
 Route::get('/app', [UrlController::class, 'create'])->name('url.create');
 Route::post('/app', [UrlController::class, 'store'])->name('url.store');
 Route::get('/{id}', [UrlController::class, 'index'])->name('url.index');
-Route::fallback(function() {
-    return redirect()->route('url.create');
-});
+Route::redirect('/', '/app');
