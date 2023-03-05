@@ -7,8 +7,8 @@
     <title>Lampurl</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex items-center justify-center min-h-screen">
-    <div class="md:w-1/2">
+<body class="p-4">
+    <div class="md:w-1/2 mx-auto mt-20">
         <div class="mb-10">
             <h1 class="text-5xl font-bold mb-5"><span class="text-orange-600">Lamp</span><span>url</span></h1>
             <p class="text-slate-600">Lampurl is used to generate short url from long links or url.</p>
