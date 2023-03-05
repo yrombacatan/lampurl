@@ -36,7 +36,7 @@ class UrlController extends Controller
         $url->origin_url = $request->url;
 
         if($url->save()) {
-            return back()
+            return back(201) 
                     ->with('url', env('APP_URL').'/'.$randomStr);
         }
 
