@@ -21,7 +21,7 @@
                         <div class="text-red-500">{{ $message }}</div>
                     @enderror
                     <input type="text" name="url" class="w-full p-2 rounded border-2 focus:border-blue-500 
-                    focus:border-2  focus:outline-none @error('url') border-red-500 @enderror" placeholder="Enter long url">
+                    focus:border-2  focus:outline-none @error('url') border-red-400 @enderror" placeholder="Enter long url">
                 </div>
                 @if (session('url'))
                     <div class="my-5 rounded p-2 bg-green-500 text-white">
